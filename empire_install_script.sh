@@ -99,21 +99,21 @@ if lsb_release -d | grep -q "Fedora"; then
 elif lsb_release -d | grep -q "Kali"; then
 	Release=Kali
 	apt-get update
-	apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libffi-dev libssl-dev libssl1.0-dev
+	apt-get install -y make g++ zlib1g-dev python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libffi-dev libssl-dev libssl1.0-dev
 	pip_packages
 	powershell_install
 	osx_utils_install
 
 elif lsb_release -d | grep -q "Ubuntu"; then
 	Release=Ubuntu
-	apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libssl-dev libffi-dev libssl1.0-dev
+	apt-get install -y make g++ zlib1g-dev python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libssl-dev libffi-dev libssl1.0-dev
 	pip_packages
 	powershell_install
 	osx_utils_install
 
 elif [ -f /usr/bin/apt-get ]; then
 	echo "Looks like a Debian/Ubuntu variant. Trying apt-get..."
- 	apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libffi-dev libssl-dev libssl1.0-dev
+ 	apt-get install -y make g++ zlib1g-dev python-dev python-m2crypto swig python-pip libxml2-dev default-jdk libffi-dev libssl-dev libssl1.0-dev
  	pip_packages
  	powershell_install
  	osx_utils_install
