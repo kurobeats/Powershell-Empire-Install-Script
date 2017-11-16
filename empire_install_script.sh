@@ -74,7 +74,7 @@ function osx_utils_install {
 	cd ../../../bomutils && make
 	make install
 	chmod 755 build/bin/mkbom
-	cp bomutils/build/bin/mkbom /usr/local/bin/mkbom
+	cp build/bin/mkbom /usr/local/bin/mkbom
 	
 	cd ../empire/setup/
 }
